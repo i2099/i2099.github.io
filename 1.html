@@ -12,136 +12,137 @@
             font-size: 1rem;
         }
     </style>
+    <script>
+        // 获取当前页面的 URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        var title = "";
+        var awardsData = [];
+        // 获取特定的参数
+        const start_param = urlParams.get('tgWebAppStartParam');  // 替换 'paramName' 为你想要获取的参数名
+        switch (start_param) {
+            case "1":
+                titl = "当前房间-8.88元5包场";
+                awardsData = [
+                    {
+                        "award": "三顺子",
+                        "description": "A.BC，如1.23",
+                        "pool": "5%"
+                    },
+                    {
+                        "award": "三豹子",
+                        "description": "A.AA，如6.66",
+                        "pool": "10%"
+                    },
+                    {
+                        "award": "四顺子",
+                        "description": "A.BBB，如1.234",
+                        "pool": "8%"
+                    }
+                ];
+                break;
+            case "2":
+                break;
+            case "3":
+                break;
+            case "4":
+                break;
+            case "5":
+                break;
+            case "6":
+                break;
+            case "7":
+                break;
+            case "8":
+                break;
+            case "9":
+                break;
+            case "10":
+                break;
+            case "11":
+                break;
+            case "12":
+                break;
+            case "13":
+                break;
+            case "14":
+                break;
+            case "15":
+                break;
+            case "16":
+                break;
+            case "17":
+                break;
+            case "18":
+                break;
+            case "19":
+                break;
+            case "20":
+                break;
+            case "21":
+                break;
+            case "22":
+                break;
+            case "23":
+                break;
+            case "24":
+                break;
+            case "25":
+                break;
+            case "26":
+                break;
+            case "27":
+                break;
+            case "28":
+                break;
+            case "29":
+                break;
+            case "30":
+                break;
+            case "31":
+                break;
+            case "32":
+                break;
+            case "33":
+                break;
+            case "34":
+                break;
+            case "35":
+                break;
+            case "36":
+                break;
+            case "37":
+                break;
+            case "38":
+                break;
+            case "39":
+                break;
+            case "40":
+                break;
+            case "41":
+                break;
+            case "42":
+                break;
+        }
+        $(function () {
+            $('#title').text(title);
+            var tbodyContent = '';
+            $.each(awardsData, function (index, item) {
+                tbodyContent += '<tr>' +
+                    '<td>' + item.award + '</td>' +
+                    '<td>' + item.description + '</td>' +
+                    '<td>' + item.pool + '</td>' +
+                    '</tr>';
+            });
+
+            // 将拼接好的 HTML 插入到 <tbody>
+            $('table tbody').html(tbodyContent);
+        });
+    </script>
 </head>
 <body>
     <div class="container-sm p-3">
-        <script>
-            // 获取当前页面的 URL
-            const urlParams = new URLSearchParams(window.location.search);
-
-            var title = "";
-            var awardsData = [];
-            // 获取特定的参数
-            const start_param = urlParams.get('tgWebAppStartParam');  // 替换 'paramName' 为你想要获取的参数名
-            switch (start_param) {
-                case 1:
-                    titl = "当前房间-8.88元5包场";
-                    awardsData = [
-                        {
-                            "award": "三顺子",
-                            "description": "A.BC，如1.23",
-                            "pool": "5%"
-                        },
-                        {
-                            "award": "三豹子",
-                            "description": "A.AA，如6.66",
-                            "pool": "10%"
-                        },
-                        {
-                            "award": "四顺子",
-                            "description": "A.BBB，如1.234",
-                            "pool": "8%"
-                        }
-                    ];
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
-                    break;
-                case 11:
-                    break;
-                case 12:
-                    break;
-                case 13:
-                    break;
-                case 14:
-                    break;
-                case 15:
-                    break;
-                case 16:
-                    break;
-                case 17:
-                    break;
-                case 18:
-                    break;
-                case 19:
-                    break;
-                case 20:
-                    break;
-                case 21:
-                    break;
-                case 22:
-                    break;
-                case 23:
-                    break;
-                case 24:
-                    break;
-                case 25:
-                    break;
-                case 26:
-                    break;
-                case 27:
-                    break;
-                case 28:
-                    break;
-                case 29:
-                    break;
-                case 30:
-                    break;
-                case 31:
-                    break;
-                case 32:
-                    break;
-                case 33:
-                    break;
-                case 34:
-                    break;
-                case 35:
-                    break;
-                case 36:
-                    break;
-                case 37:
-                    break;
-                case 38:
-                    break;
-                case 39:
-                    break;
-                case 40:
-                    break;
-                case 41:
-                    break;
-                case 42:
-                    break;
-            }
-            $(function () {
-                $('#title').text(title);
-                var tbodyContent = '';
-                $.each(awardsData, function (index, item) {
-                    tbodyContent += '<tr>' +
-                        '<td>' + item.award + '</td>' +
-                        '<td>' + item.description + '</td>' +
-                        '<td>' + item.pool + '</td>' +
-                        '</tr>';
-                });
-
-                // 将拼接好的 HTML 插入到 <tbody>
-                $('table tbody').html(tbodyContent);
-            });
-        </script>
+      
         <p><strong>特殊中奖规则说明</strong></p>
         <p><strong>一、奖金池</strong></p>
         <p>平台将每局红包总金额的6%添加到奖金池。如果玩家抢到特殊数字，就能赢取奖金池里的一部分奖金;若无人中奖，奖金池将持续增加。</p>
