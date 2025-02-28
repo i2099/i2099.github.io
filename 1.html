@@ -20,118 +20,20 @@
         var awardsData = [];
         // 获取特定的参数
         const start_param = urlParams.get('tgWebAppStartParam');  // 替换 'paramName' 为你想要获取的参数名
-        switch (start_param) {
-            case "1":
-                titl = "当前房间-8.88元5包场";
-                awardsData = [
-                    {
-                        "award": "三顺子",
-                        "description": "A.BC，如1.23",
-                        "pool": "5%"
-                    },
-                    {
-                        "award": "三豹子",
-                        "description": "A.AA，如6.66",
-                        "pool": "10%"
-                    },
-                    {
-                        "award": "四顺子",
-                        "description": "A.BBB，如1.234",
-                        "pool": "8%"
-                    }
-                ];
-                break;
-            case "2":
-                break;
-            case "3":
-                break;
-            case "4":
-                break;
-            case "5":
-                break;
-            case "6":
-                break;
-            case "7":
-                break;
-            case "8":
-                break;
-            case "9":
-                break;
-            case "10":
-                break;
-            case "11":
-                break;
-            case "12":
-                break;
-            case "13":
-                break;
-            case "14":
-                break;
-            case "15":
-                break;
-            case "16":
-                break;
-            case "17":
-                break;
-            case "18":
-                break;
-            case "19":
-                break;
-            case "20":
-                break;
-            case "21":
-                break;
-            case "22":
-                break;
-            case "23":
-                break;
-            case "24":
-                break;
-            case "25":
-                break;
-            case "26":
-                break;
-            case "27":
-                break;
-            case "28":
-                break;
-            case "29":
-                break;
-            case "30":
-                break;
-            case "31":
-                break;
-            case "32":
-                break;
-            case "33":
-                break;
-            case "34":
-                break;
-            case "35":
-                break;
-            case "36":
-                break;
-            case "37":
-                break;
-            case "38":
-                break;
-            case "39":
-                break;
-            case "40":
-                break;
-            case "41":
-                break;
-            case "42":
-                break;
-        }
+
+        var data = [{ "Id": 1, "Bao": 5, "Jine": 8.88, "Awards": [{ "Id": 4, "Name": "rr委任为", "Desc": "222", "Pool": 3.00 }] }, { "Id": 2, "Bao": 5, "Jine": 18.00, "Awards": [{ "Id": 5, "Name": "112", "Desc": "33", "Pool": 4.00 }] }, { "Id": 3, "Bao": 5, "Jine": 58.00, "Awards": [] }, { "Id": 4, "Bao": 5, "Jine": 88.00, "Awards": [] }, { "Id": 5, "Bao": 5, "Jine": 128.00, "Awards": [] }, { "Id": 6, "Bao": 5, "Jine": 188.00, "Awards": [] }, { "Id": 7, "Bao": 5, "Jine": 288.00, "Awards": [] }, { "Id": 8, "Bao": 5, "Jine": 388.00, "Awards": [] }, { "Id": 9, "Bao": 5, "Jine": 588.00, "Awards": [] }, { "Id": 10, "Bao": 5, "Jine": 888.00, "Awards": [] }, { "Id": 11, "Bao": 5, "Jine": 1288.00, "Awards": [] }, { "Id": 12, "Bao": 5, "Jine": 1888.00, "Awards": [] }, { "Id": 13, "Bao": 5, "Jine": 18.00, "Awards": [] }, { "Id": 14, "Bao": 5, "Jine": 2888.00, "Awards": [] }, { "Id": 15, "Bao": 5, "Jine": 4888.00, "Awards": [] }, { "Id": 16, "Bao": 5, "Jine": 8888.00, "Awards": [] }, { "Id": 17, "Bao": 5, "Jine": 18888.00, "Awards": [] }, { "Id": 18, "Bao": 5, "Jine": 28888.00, "Awards": [] }, { "Id": 19, "Bao": 5, "Jine": 58888.00, "Awards": [] }, { "Id": 20, "Bao": 5, "Jine": 88888.00, "Awards": [] }, { "Id": 21, "Bao": 5, "Jine": 188888.00, "Awards": [] }];
+        var result = data.filter(function (item) {
+            return item.Id === 1;
+        });
+
         $(function () {
-            $('#title').text(title);
+            $('#title').text(result.Jine + '元' + result.Bao + '包');
             var tbodyContent = '';
-            $.each(awardsData, function (index, item) {
+            $.each(result.Awards, function (index, item) {
                 tbodyContent += '<tr>' +
-                    '<td>' + item.award + '</td>' +
-                    '<td>' + item.description + '</td>' +
-                    '<td>' + item.pool + '</td>' +
+                    '<td>' + item.Name + '</td>' +
+                    '<td>' + item.Desc + '</td>' +
+                    '<td>' + item.Pool + '</td>' +
                     '</tr>';
             });
 
