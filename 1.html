@@ -10,7 +10,13 @@
 <body>
     <div class="container-sm">
         <script>
-            document.writeln(document.URL);
+            // 获取当前页面的 URL
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // 获取特定的参数
+            const start_param = urlParams.get('start_param');  // 替换 'paramName' 为你想要获取的参数名
+
+            document.writeln(start_param);
         </script>
         <h3>特殊中奖规则说明</h3>
         <h2>一、奖金池</h2>
