@@ -25,11 +25,11 @@
         var result = data.filter(function (item) {
             return item.Id === 1;
         });
-console.log(result);
+      
         $(function () {
-            $('#title').text(result.Jine + '元' + result.Bao + '包');
+            $('#title').text(result[0].Jine + '元' + result[0].Bao + '包');
             var tbodyContent = '';
-            $.each(result.Awards, function (index, item) {
+            $.each(result[0].Awards, function (index, item) {
                 tbodyContent += '<tr>' +
                     '<td>' + item.Name + '</td>' +
                     '<td>' + item.Desc + '</td>' +
